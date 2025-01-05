@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider de Imagens Aleatórias</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 800px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    #slider {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <img id="slider" src="" alt="Imagem do Slider">
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script>
+    // Função para embaralhar o array de imagens
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    // Caminho das imagens (supondo que estejam na pasta 'images')
+    const imageCount = 86;
+    const imagePath = 'static/images/amomô';
+    const imageArray = [];
+
+    // Preenche o array com os caminhos das imagens
+    for (let i = 1; i <= imageCount; i++) {
+      imageArray.push(`${imagePath}/image${i}.jpg`);
+    }
+
+    // Embaralha as imagens
+    shuffleArray(imageArray);
+
+    // Variáveis para controle do slider
+    let currentIndex = 0;
+
+    function changeImage(direction) {
+      currentIndex += direction;
+      
+      // Verifica o limite do array
+      if (currentIndex < 0) {
+        currentIndex = imageArray.length - 1;
+      } else if (currentIndex >= imageArray.length) {
+        currentIndex = 0;
+      }
+
+      // Atualiza a imagem exibida no slider
+      document.getElementById('slider').src = imageArray[currentIndex];
+    }
+
+    // Inicializa o slider com a primeira imagem
+    changeImage(0);
+  </script>
+</body>
+</html>

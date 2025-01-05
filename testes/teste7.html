@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slider {
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 800px;
+            height: 450px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides" id="slidesContainer"></div>
+    </div>
+
+    <script>
+        // Configuração do diretório das imagens
+        const imageCount = 86; // Número total de imagens
+        const imagePath = 'static/images/amomô/'; // Caminho da pasta das imagens
+        const imageArray = [];
+
+        // Preenche o array com os caminhos das imagens na ordem sequencial
+        for (let i = 1; i <= imageCount; i++) {
+            imageArray.push(`${imagePath}image${i}.jpg`);
+        }
+
+        // Seleciona o container para adicionar as imagens
+        const slidesContainer = document.getElementById('slidesContainer');
+
+        // Adiciona cada imagem ao container
+        imageArray.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image;
+            imgElement.alt = 'Image not found';
+            slidesContainer.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>

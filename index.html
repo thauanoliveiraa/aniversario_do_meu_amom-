@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário do Amor da Minha Vida</title>
+    <style>
+        @font-face {
+            font-family: 'MermaidSwashCaps';
+            src: url('../static/fonts/Mermaid\ Swash\ Caps.ttf');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            background-color: rgb(71, 204, 238);
+            font-family: 'MermaidSwashCaps', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        h1 {
+            font-size: 2em;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1em;
+            color: #000000;
+        }
+
+        .bolo {
+            margin-right: 5px;
+        }
+
+        .conteudo-aniversario {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            justify-content: center;
+            -webkit-box-shadow: 0px 9px 22px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 9px 22px 0px rgba(0, 0, 0, 1);
+            box-shadow: 0px 9px 22px 0px rgba(0, 0, 0, 1);
+
+        }
+
+        .countdown {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(247, 151, 239);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 10px;
+        }
+
+        .countdown div {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .countdown span {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .sereias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .redirect-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #000000;
+            background-color: #f8aaf4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.6s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .redirect-btn:hover {
+            background-color: #cfa3cd;
+        }
+
+        #tulipa {
+            font-size: 2rem;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            .countdown div {
+                font-size: 1.5rem;
+            }
+
+            .countdown span {
+                font-size: 3rem;
+            }
+
+            .sereias iframe {
+                width: 250px;
+                height: 200px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .conteudo-aniversario {
+                width: 70%;
+            }
+
+            .sereias iframe {
+                width: 350px;
+                height: 300px;
+            }
+        }
+
+
+
+
+
+
+
+        .slider {
+            width: 300px;
+            height: 180px;
+            overflow: hidden;
+
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+            margin-left: 24%;
+
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slide 100s infinite;
+        }
+
+        .slides img{
+            width: 400px;
+            height: 200px;
+        }
+
+
+        .slides-images {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes slide {
+
+            0%,
+            2% {
+                transform: translateX(0);
+            }
+
+            4%,
+            6% {
+                transform: translateX(-100%);
+            }
+
+            8%,
+            10% {
+                transform: translateX(-200%);
+            }
+
+            12%,
+            14% {
+                transform: translateX(-300%);
+            }
+
+            16% {
+                transform: translateX(-400%);
+            }
+
+            18% {
+                transform: translateX(-500%);
+            }
+
+            20% {
+                transform: translateX(-600%);
+            }
+
+            22% {
+                transform: translateX(-700%);
+            }
+
+            24% {
+                transform: translateX(-800%);
+            }
+
+            26% {
+                transform: translateX(-900%);
+            }
+
+            28% {
+                transform: translateX(-1000%);
+            }
+
+            30% {
+                transform: translateX(-1100%);
+            }
+
+            32% {
+                transform: translateX(-1200%);
+            }
+
+            34% {
+                transform: translateX(-1400%);
+            }
+
+            
+            36% {
+                transform: translateX(-1500%);
+            }
+            
+            38% {
+                transform: translateX(-1600%);
+            }
+            
+            40% {
+                transform: translateX(-1700%);
+            }
+            
+            42% {
+                transform: translateX(-1800%);
+            }
+            
+            44% {
+                transform: translateX(-1900%);
+            }
+            
+            46% {
+                transform: translateX(-2000%);
+            }
+            
+            48% {
+                transform: translateX(-2100%);
+            }
+            
+            50% {
+                transform: translateX(-2200%);
+            }
+            
+            52% {
+                transform: translateX(-2300%);
+            }
+            
+            54% {
+                transform: translateX(-2400%);
+            }
+            
+            56% {
+                transform: translateX(-2500%);
+            }
+            
+            58% {
+                transform: translateX(-2600%);
+            }
+            
+            60% {
+                transform: translateX(-2700%);
+            }
+            
+            62% {
+                transform: translateX(-2800%);
+            }
+            
+            64% {
+                transform: translateX(-2900%);
+            }
+            
+            66% {
+                transform: translateX(-3000%);
+            }
+            
+            68% {
+                transform: translateX(-3100%);
+            }
+            
+            70% {
+                transform: translateX(-3200%);
+            }
+            
+            72% {
+                transform: translateX(-3300%);
+            }
+            
+            74% {
+                transform: translateX(-3400%);
+            }
+            
+            76% {
+                transform: translateX(-3500%);
+            }
+            
+            78% {
+                transform: translateX(-3600%);
+            }
+            
+            80% {
+                transform: translateX(-3700%);
+            }
+            
+            82% {
+                transform: translateX(-3800%);
+            }
+            
+            84% {
+                transform: translateX(-3900%);
+            }
+            
+            86% {
+                transform: translateX(-4000%);
+            }
+            
+            88% {
+                transform: translateX(-4100%);
+            }
+            
+            90% {
+                transform: translateX(-4200%);
+            }
+            
+            92% {
+                transform: translateX(-4300%);
+            }
+            
+            94% {
+                transform: translateX(-4400%);
+            }
+            
+            96% {
+                transform: translateX(-4500%);
+            }
+            
+            98% {
+                transform: translateX(-4600%);
+            }
+            
+            100% {
+                transform: translateX(-4700%);
+            }
+            
+        }
+
+
+
+        @media (max-width: 1024px) {
+            .slider {
+
+                margin-left: 24%;
+
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider {
+
+                margin-left: 16%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="conteudo-aniversario">
+        <h1> <span class="bolo">🎂</span> Aniversário da minha amorinha <span class="">🎂</span></h1>
+        <h2>🎈🎈Iniciem a contagem regressivaaaa, faltam:🎈🎈</h2>
+
+        <div class="countdown">
+            <div>⏰<span id="days">0</span> dias</div>
+            <div><span id="hours">0</span> horas</div>
+            <div><span id="minutes">0</span> minutos</div>
+            <div><span id="seconds">0</span> segundos</div>
+        </div>
+
+        <h2><span class="bolo">🎉</span>Você está pronta minha menininha?🎉</h2>
+
+
+
+
+        <!-- 
+        <iframe src="https://giphy.com/embed/sU8o4yt6G3Nije28VX" width="600" height="271" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        -->
+
+        <div class="slider">
+            <div class="slides">
+                <iframe src="https://giphy.com/embed/sU8o4yt6G3Nije28VX" width="600" height="271" style=""
+                    frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+                <div id="slidesContainer"></div>
+
+                <img src="static/images/amomô/1.jpg" alt="Imagem 1" class="slides-images">
+                <img src="static/images/amomô/2.jpg" alt="Imagem 2" class="slides-images">
+                <img src="static/images/amomô/3.jpg" alt="Imagem 3" class="slides-images">
+                <img src="static/images/amomô/4.jpg" alt="Imagem 4" class="slides-images">
+                <img src="static/images/amomô/5.jpg" alt="Imagem 5" class="slides-images">
+                <img src="static/images/amomô/6.jpg" alt="Imagem 6" class="slides-images">
+                <img src="static/images/amomô/7.jpg" alt="Imagem 7" class="slides-images">
+                <img src="static/images/amomô/8.jpg" alt="Imagem 8" class="slides-images">
+                <img src="static/images/amomô/9.jpg" alt="Imagem 9" class="slides-images">
+                <img src="static/images/amomô/10.jpg" alt="Imagem 10" class="slides-images">
+                <img src="static/images/amomô/11.jpg" alt="Imagem 11" class="slides-images">
+                <img src="static/images/amomô/12.jpg" alt="Imagem 12" class="slides-images">
+                <img src="static/images/amomô/13.jpg" alt="Imagem 13" class="slides-images">
+                <img src="static/images/amomô/14.jpg" alt="Imagem 14" class="slides-images">
+                <img src="static/images/amomô/15.jpg" alt="Imagem 15" class="slides-images">
+                <img src="static/images/amomô/16.jpg" alt="Imagem 16" class="slides-images">
+                <img src="static/images/amomô/17.jpg" alt="Imagem 17" class="slides-images">
+                <img src="static/images/amomô/18.jpg" alt="Imagem 18" class="slides-images">
+                <img src="static/images/amomô/19.jpg" alt="Imagem 19" class="slides-images">
+                <img src="static/images/amomô/20.jpg" alt="Imagem 20" class="slides-images">
+                <img src="static/images/amomô/21.jpg" alt="Imagem 21" class="slides-images">
+                <img src="static/images/amomô/22.jpg" alt="Imagem 22" class="slides-images">
+                <img src="static/images/amomô/23.jpg" alt="Imagem 23" class="slides-images">
+                <img src="static/images/amomô/24.jpg" alt="Imagem 24" class="slides-images">
+                <img src="static/images/amomô/25.jpg" alt="Imagem 25" class="slides-images">
+                <img src="static/images/amomô/26.jpg" alt="Imagem 26" class="slides-images">
+                <img src="static/images/amomô/27.jpg" alt="Imagem 27" class="slides-images">
+                <img src="static/images/amomô/28.jpg" alt="Imagem 28" class="slides-images">
+                <img src="static/images/amomô/29.jpg" alt="Imagem 29" class="slides-images">
+                <img src="static/images/amomô/30.jpg" alt="Imagem 30" class="slides-images">
+                <img src="static/images/amomô/31.jpg" alt="Imagem 31" class="slides-images">
+                <img src="static/images/amomô/32.jpg" alt="Imagem 32" class="slides-images">
+                <img src="static/images/amomô/33.jpg" alt="Imagem 33" class="slides-images">
+                <img src="static/images/amomô/34.jpg" alt="Imagem 34" class="slides-images">
+                <img src="static/images/amomô/35.jpg" alt="Imagem 35" class="slides-images">
+                <img src="static/images/amomô/36.jpg" alt="Imagem 36" class="slides-images">
+                <img src="static/images/amomô/37.jpg" alt="Imagem 37" class="slides-images">
+                <img src="static/images/amomô/38.jpg" alt="Imagem 38" class="slides-images">
+                <img src="static/images/amomô/39.jpg" alt="Imagem 39" class="slides-images">
+                <img src="static/images/amomô/40.jpg" alt="Imagem 40" class="slides-images">
+                <img src="static/images/amomô/41.jpg" alt="Imagem 41" class="slides-images">
+                <img src="static/images/amomô/42.jpg" alt="Imagem 42" class="slides-images">
+                <img src="static/images/amomô/43.jpg" alt="Imagem 43" class="slides-images">
+                <img src="static/images/amomô/44.jpg" alt="Imagem 44" class="slides-images">
+                <img src="static/images/amomô/45.jpg" alt="Imagem 45" class="slides-images">
+                <img src="static/images/amomô/46.jpg" alt="Imagem 46" class="slides-images">
+                <img src="static/images/amomô/47.jpg" alt="Imagem 47" class="slides-images">
+                <img src="static/images/amomô/48.jpg" alt="Imagem 48" class="slides-images">
+                <img src="static/images/amomô/49.jpg" alt="Imagem 49" class="slides-images">
+                <img src="static/images/amomô/50.jpg" alt="Imagem 50" class="slides-images">
+                <img src="static/images/amomô/51.jpg" alt="Imagem 51" class="slides-images">
+                <img src="static/images/amomô/52.jpg" alt="Imagem 52" class="slides-images">
+                <img src="static/images/amomô/53.jpg" alt="Imagem 53" class="slides-images">
+                <img src="static/images/amomô/54.jpg" alt="Imagem 54" class="slides-images">
+                <img src="static/images/amomô/55.jpg" alt="Imagem 55" class="slides-images">
+                <img src="static/images/amomô/56.jpg" alt="Imagem 56" class="slides-images">
+                <img src="static/images/amomô/57.jpg" alt="Imagem 57" class="slides-images">
+                <img src="static/images/amomô/58.jpg" alt="Imagem 58" class="slides-images">
+                <img src="static/images/amomô/59.jpg" alt="Imagem 59" class="slides-images">
+                <img src="static/images/amomô/60.jpg" alt="Imagem 60" class="slides-images">
+                <img src="static/images/amomô/61.jpg" alt="Imagem 61" class="slides-images">
+                <img src="static/images/amomô/62.jpg" alt="Imagem 62" class="slides-images">
+                <img src="static/images/amomô/63.jpg" alt="Imagem 63" class="slides-images">
+                <img src="static/images/amomô/64.jpg" alt="Imagem 64" class="slides-images">
+                <img src="static/images/amomô/65.jpg" alt="Imagem 65" class="slides-images">
+                <img src="static/images/amomô/66.jpg" alt="Imagem 66" class="slides-images">
+                <img src="static/images/amomô/67.jpg" alt="Imagem 67" class="slides-images">
+                <img src="static/images/amomô/68.jpg" alt="Imagem 68" class="slides-images">
+                <img src="static/images/amomô/69.jpg" alt="Imagem 69" class="slides-images">
+                <img src="static/images/amomô/70.jpg" alt="Imagem 70" class="slides-images">
+                <img src="static/images/amomô/71.jpg" alt="Imagem 71" class="slides-images">
+                <img src="static/images/amomô/72.jpg" alt="Imagem 72" class="slides-images">
+                <img src="static/images/amomô/73.jpg" alt="Imagem 73" class="slides-images">
+                <img src="static/images/amomô/74.jpg" alt="Imagem 74" class="slides-images">
+                <img src="static/images/amomô/75.jpg" alt="Imagem 75" class="slides-images">
+                <img src="static/images/amomô/76.jpg" alt="Imagem 76" class="slides-images">
+                <img src="static/images/amomô/77.jpg" alt="Imagem 77" class="slides-images">
+                <img src="static/images/amomô/78.jpg" alt="Imagem 78" class="slides-images">
+                <img src="static/images/amomô/79.jpg" alt="Imagem 79" class="slides-images">
+                <img src="static/images/amomô/80.jpg" alt="Imagem 80" class="slides-images">
+                <img src="static/images/amomô/81.jpg" alt="Imagem 81" class="slides-images">
+                <img src="static/images/amomô/82.jpg" alt="Imagem 82" class="slides-images">
+                <img src="static/images/amomô/83.jpg" alt="Imagem 83" class="slides-images">
+                <img src="static/images/amomô/84.jpg" alt="Imagem 84" class="slides-images">
+                <img src="static/images/amomô/85.jpg" alt="Imagem 85" class="slides-images">
+                <img src="static/images/amomô/86.jpg" alt="Imagem 86" class="slides-images">
+
+
+                <!-- 
+                <img src="https://via.placeholder.com/800x450?text=Photo+1" alt="Photo 1" class="slides-images">
+
+                <img src="https://via.placeholder.com/800x450?text=Photo+1" alt="Photo 1" class="slides-images">
+
+                <img src="https://via.placeholder.com/800x450?text=Photo+1" alt="Photo 1" class="slides-images">
+                -->
+            </div>
+        </div>
+
+        <div class="sereias">
+
+
+        </div>
+
+
+    </section>
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date('2025-01-09T00:00:00');
+            const currentDate = new Date();
+            const timeDifference = targetDate - currentDate;
+
+            if (timeDifference > 0) {
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                document.querySelector('.conteudo-aniversario').innerHTML = `
+                    <h1>Feliz aniversário minha amorinha</h1>
+                    <h1>O seu dia chegoooooouuuuuuuuuu!!!!!!</h1>
+                    <p>Parabéns meu amorzinho, meu melzinho, minha amorinha, minha sereiazinha, meu momô, meu amomô, minha tulipinha</p>
+                    <p id="tulipa">🌷</p>
+                    <button class="redirect-btn" onclick="redirectToPage()">Clique e veja as próximas surpresas!</button>
+                `;
+            }
+        }
+
+        function redirectToPage() {
+            window.location.href = 'aniversario-momo.html';
+        }
+
+        setInterval(updateCountdown, 1000);
+
+
+
+
+
+
+        /*
+                // Função para gerar números aleatórios
+                function shuffleArray(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                }
+        
+                // Caminho das imagens (supondo que estejam na pasta 'images')
+                const imageCount = 86;
+                const imagePath = 'static/images/amomô';
+                const imageArray = [];
+        
+                // Preenche a array com os caminhos das imagens
+                for (let i = 1; i <= imageCount; i++) {
+                    imageArray.push(`${imagePath}image${i}.jpg`);
+                }
+        
+                // Embaralha as imagens
+                shuffleArray(imageArray);
+        
+                // Seleciona o container onde as imagens serão adicionadas
+                const slidesContainer = document.getElementById('slidesContainer');
+        
+                // Adiciona as imagens ao HTML
+                imageArray.forEach(image => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = image;
+                    imgElement.alt = 'Random Image';
+                    slidesContainer.appendChild(imgElement);
+                });
+                */
+    </script>
+</body>
+
+</html>
