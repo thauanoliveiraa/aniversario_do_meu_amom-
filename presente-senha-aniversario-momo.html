@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário Mozinho</title>
+    <style>
+        @font-face {
+            font-family: 'MermaidSwashCaps';
+            src: url('../static/fonts/Mermaid\ Swash\ Caps.ttf');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            background-color: rgb(71, 204, 238);
+            font-family: 'MermaidSwashCaps', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        h1 {
+            font-size: 2em;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1em;
+            color: #000000;
+        }
+
+        .bolo {
+            margin-right: 5px;
+        }
+
+        .espacamento {
+            margin-right: 10px;
+        }
+
+        .conteudo-aniversario {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            justify-content: center;
+            -webkit-box-shadow: 0px 9px 22px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 9px 22px 0px rgba(0, 0, 0, 1);
+            box-shadow: 0px 9px 22px 0px rgba(0, 0, 0, 1);
+
+        }
+
+        .countdown {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(247, 151, 239);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 10px;
+        }
+
+        .countdown div {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .countdown span {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .sereias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .redirect-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #000000;
+            background-color: #f8aaf4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.6s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .redirect-btn:hover {
+            background-color: #cfa3cd;
+        }
+
+        #tulipa {
+            font-size: 2rem;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            .countdown div {
+                font-size: 1.5rem;
+            }
+
+            .countdown span {
+                font-size: 3rem;
+            }
+
+            .sereias iframe {
+                width: 250px;
+                height: 200px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .conteudo-aniversario {
+                width: 70%;
+            }
+
+            .sereias iframe {
+                width: 350px;
+                height: 300px;
+            }
+        }
+
+
+
+
+
+
+
+        .slider {
+            width: 300px;
+            height: 180px;
+            overflow: hidden;
+
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+            margin-left: 24%;
+
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slide 100s infinite;
+        }
+
+        .slides img {
+            width: 400px;
+            height: 200px;
+        }
+
+
+        .slides-images {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes slide {
+
+            0%,
+            2% {
+                transform: translateX(0);
+            }
+
+            4%,
+            6% {
+                transform: translateX(-100%);
+            }
+
+            8%,
+            10% {
+                transform: translateX(-200%);
+            }
+
+            12%,
+            14% {
+                transform: translateX(-300%);
+            }
+
+            16% {
+                transform: translateX(-400%);
+            }
+
+            18% {
+                transform: translateX(-500%);
+            }
+
+            20% {
+                transform: translateX(-600%);
+            }
+
+            22% {
+                transform: translateX(-700%);
+            }
+
+            24% {
+                transform: translateX(-800%);
+            }
+
+            26% {
+                transform: translateX(-900%);
+            }
+
+            28% {
+                transform: translateX(-1000%);
+            }
+
+            30% {
+                transform: translateX(-1100%);
+            }
+
+            32% {
+                transform: translateX(-1200%);
+            }
+
+            34% {
+                transform: translateX(-1400%);
+            }
+
+
+            36% {
+                transform: translateX(-1500%);
+            }
+
+            38% {
+                transform: translateX(-1600%);
+            }
+
+            40% {
+                transform: translateX(-1700%);
+            }
+
+            42% {
+                transform: translateX(-1800%);
+            }
+
+            44% {
+                transform: translateX(-1900%);
+            }
+
+            46% {
+                transform: translateX(-2000%);
+            }
+
+            48% {
+                transform: translateX(-2100%);
+            }
+
+            50% {
+                transform: translateX(-2200%);
+            }
+
+            52% {
+                transform: translateX(-2300%);
+            }
+
+            54% {
+                transform: translateX(-2400%);
+            }
+
+            56% {
+                transform: translateX(-2500%);
+            }
+
+            58% {
+                transform: translateX(-2600%);
+            }
+
+            60% {
+                transform: translateX(-2700%);
+            }
+
+            62% {
+                transform: translateX(-2800%);
+            }
+
+            64% {
+                transform: translateX(-2900%);
+            }
+
+            66% {
+                transform: translateX(-3000%);
+            }
+
+            68% {
+                transform: translateX(-3100%);
+            }
+
+            70% {
+                transform: translateX(-3200%);
+            }
+
+            72% {
+                transform: translateX(-3300%);
+            }
+
+            74% {
+                transform: translateX(-3400%);
+            }
+
+            76% {
+                transform: translateX(-3500%);
+            }
+
+            78% {
+                transform: translateX(-3600%);
+            }
+
+            80% {
+                transform: translateX(-3700%);
+            }
+
+            82% {
+                transform: translateX(-3800%);
+            }
+
+            84% {
+                transform: translateX(-3900%);
+            }
+
+            86% {
+                transform: translateX(-4000%);
+            }
+
+            88% {
+                transform: translateX(-4100%);
+            }
+
+            90% {
+                transform: translateX(-4200%);
+            }
+
+            92% {
+                transform: translateX(-4300%);
+            }
+
+            94% {
+                transform: translateX(-4400%);
+            }
+
+            96% {
+                transform: translateX(-4500%);
+            }
+
+            98% {
+                transform: translateX(-4600%);
+            }
+
+            100% {
+                transform: translateX(-4700%);
+            }
+
+        }
+
+
+
+        @media (max-width: 1024px) {
+            .slider {
+
+                margin-left: 24%;
+
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider {
+
+                margin-left: 16%;
+
+            }
+        }
+
+        #heart-button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 80px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+
+        .container input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="conteudo-aniversario">
+
+        <h1>Digite a senha para continuar momô!</h1>
+        <p>Na-na-ni-na-naoooooo, as próximas partes só quando estivermos juntinhoooossssss ❤</p>
+        <div class="container">
+            <input type="password" id="password" placeholder="Digite a senha" />
+            <p class="error" id="error">Epa epa momozinho, senha errada. Tenta de novooooooo</p>
+            
+            <!-- <button id="nextButton" disabled>Next</button> -->
+
+            <button id="heart-button" id="heart-button-2" onclick="redirectToPage()" disabled>🎁</button>
+        </div>
+        
+    </section>
+
+
+    <script>
+        const correctPassword = "euteamomozinhodaminhavida0925"; // Replace with desired password
+        const passwordInput = document.getElementById('password');
+        const nextButton = document.getElementById('heart-button');
+        const errorMessage = document.getElementById('error');
+
+        passwordInput.addEventListener('input', () => {
+            if (passwordInput.value === correctPassword) {
+                nextButton.disabled = false;
+                errorMessage.style.display = 'none';
+            } else {
+                nextButton.disabled = true;
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (passwordInput.value === correctPassword) {
+                window.location.href = 'presente-2-aniversario-momo.html'; // Replace with your desired URL
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        });
+
+        function redirectToPage() {
+            window.location.href = 'presente-2-aniversario-momo.html';
+        }
+    </script>
+</body>
+
+</html>

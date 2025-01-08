@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário Mozinho</title>
+    <style>
+        @font-face {
+            font-family: 'MermaidSwashCaps';
+            src: url('../static/fonts/Mermaid\ Swash\ Caps.ttf');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            background-color: rgb(71, 204, 238);
+            font-family: 'MermaidSwashCaps', Arial, sans-serif;
+            height: 120vh;
+            text-align: center;
+        }
+
+        .heart-button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 80px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        #heart-button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 80px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .heart-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #counter {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #next-button {
+            display: none;
+
+        }
+
+        #next-button-button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 80px;
+            cursor: pointer;
+  
+        }
+
+
+
+
+
+
+
+        .letter-style {
+            background-color: #fdf3e6;
+            /* Papel amarelado */
+            border: 1px solid #d4c5a1;
+            /* Borda de papel */
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+            /* Sombra para dar profundidade */
+            padding: 20px;
+            /* Espaço interno */
+            font-family: 'Georgia', serif;
+            /* Fonte semelhante a escrita de cartas */
+            line-height: 1.6;
+            /* Espaçamento entre linhas */
+            margin: 20px auto;
+            /* Margem para centralizar */
+            max-width: 600px;
+            /* Largura máxima */
+            border-radius: 8px;
+            /* Bordas arredondadas */
+        }
+
+        .letter-style::before {
+            content: '💌';
+            font-size: 2rem;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🧩Monte o quebra-cabeçaaaa🧩</h1>
+
+    <img src="amo.png" alt="">
+
+    <div class="">
+        <p><button id="" onclick="goToNextPage()">▶</button></p>
+        <p><button id="" onclick="goToBeforePage()">◀</button></p>
+    </div>
+
+
+
+
+    <script>
+        const heartButton1 = document.getElementById('heart-button-1');
+        const heartButton2 = document.getElementById('heart-button-2');
+        const nextButton = document.getElementById('next-button');
+        const counter = document.getElementById('counter');
+
+        let clickCount = 0;
+        const requiredClicks = 2;
+
+        const updateCounter = () => {
+            counter.textContent = clickCount >= requiredClicks
+                ? `🔓 Cliques: ${clickCount}/${requiredClicks}`
+                : `🔒 Cliques: ${clickCount}/${requiredClicks}`;
+
+            if (clickCount >= requiredClicks) {
+                heartButton1.disabled = true;
+                heartButton2.disabled = true;
+                nextButton.style.display = 'inline-block';
+            }
+        };
+
+        heartButton1.addEventListener('click', () => {
+            if (clickCount < requiredClicks) {
+                clickCount++;
+                updateCounter();
+            }
+        });
+
+        heartButton2.addEventListener('click', () => {
+            if (clickCount < requiredClicks) {
+                clickCount++;
+                updateCounter();
+            }
+        });
+
+        function goToNextPage() {
+            window.location.href = 'presente-6-aniversario-momo.html'; // Substitua pelo link desejado
+        }
+        function goToBeforePage() {
+            window.location.href = 'presente-4-aniversario-momo.html'; // Substitua pelo link desejado
+        }
+    </script>
+</body>
+
+</html>
