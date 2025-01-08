@@ -42,6 +42,10 @@
             margin-right: 5px;
         }
 
+        .espacamento {
+            margin-right: 10px;
+        }
+
         .conteudo-aniversario {
             width: 90%;
             max-width: 600px;
@@ -388,7 +392,19 @@
 
             }
         }
+
+        .heart-button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 80px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 10px;
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -525,9 +541,10 @@
 
     </section>
 
+    
     <script>
         function updateCountdown() {
-            const targetDate = new Date('2025-01-08T11:36:00');
+            const targetDate = new Date('2025-01-06T09:46:00');
             const currentDate = new Date();
             const timeDifference = targetDate - currentDate;
 
@@ -543,17 +560,32 @@
                 document.getElementById('seconds').textContent = seconds;
             } else {
                 document.querySelector('.conteudo-aniversario').innerHTML = `
+                    <h1><span class="bolo">🎀</span><span class="espacamento">Tchan</span> <span class="espacamento">Tchan</span> <span class="espacamento">Tchan</span> <span class="espacamento">Tchaaaaaan</span>🎀</h1>
+
+                    <h2><span class="espacamento">✂</span>Presentes liberados! Clique para abri-loooos!✂</h2>
+                    
+                    <button class="heart-button" id="heart-button-2" onclick="redirectToPage()">🎁</button>
+                    
+                `;
+            }
+
+            /*
+             else {
+                document.querySelector('.conteudo-aniversario').innerHTML = `
                     <h1>Feliz aniversário minha amorinha</h1>
                     <h1>O seu dia chegoooooouuuuuuuuuu!!!!!!</h1>
                     <p>Parabéns meu amorzinho, meu melzinho, minha amorinha, minha sereiazinha, meu momô, meu amomô, minha tulipinha</p>
                     <p id="tulipa">🌷</p>
                     <button class="redirect-btn" onclick="redirectToPage()">Clique e veja as próximas surpresas!</button>
+
+                    
                 `;
             }
+            */
         }
 
         function redirectToPage() {
-            window.location.href = 'aniversario-momo.html';
+            window.location.href = 'presente-1-aniversario-momo.html';
         }
 
         setInterval(updateCountdown, 1000);
